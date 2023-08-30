@@ -1,4 +1,4 @@
-name: my-wp-base
+name: mjbaga-wp-base
 type: wordpress
 docroot: ""
 php_version: "8.0"
