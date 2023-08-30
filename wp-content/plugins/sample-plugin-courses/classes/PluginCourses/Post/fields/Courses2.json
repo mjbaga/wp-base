@@ -1,0 +1,133 @@
+[
+    {
+        "key": "group_5fa39b1e57345",
+        "title": "Post: Courses",
+        "fields": [
+            {
+                "key": "field_5faa58c033dd6",
+                "label": "Course Code",
+                "name": "course_code",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fa3b3ebcd5fd",
+                "label": "Tagline",
+                "name": "tagline",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": 250
+            },
+            {
+                "key": "field_5fa3b3fccd5fe",
+                "label": "CTA",
+                "name": "cta",
+                "type": "link",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array"
+            },
+            {
+                "key": "field_5fa3b407cd5ff",
+                "label": "Image Placement",
+                "name": "image_placement",
+                "type": "radio",
+                "instructions": "Placement of Featured Image Left\/Right",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "right": "Right",
+                    "left": "Left"
+                },
+                "allow_null": 0,
+                "other_choice": 0,
+                "default_value": "right",
+                "layout": "horizontal",
+                "return_format": "value",
+                "save_other_choice": 0
+            },
+            {
+                "key": "field_5fa39b239db17",
+                "label": "Academic School",
+                "name": "academic_school",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "ba": "Business & Accountancy",
+                    "de": "Design & Environment",
+                    "soe": "Engineering",
+                    "fms": "Film & Media Studies",
+                    "hs": "Health Sciences",
+                    "hms": "Humanities & Social Sciences",
+                    "ict": "Infocomm Technology",
+                    "lsct": "Life Science & Chemical Technology"
+                },
+                "default_value": false,
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "plugin-courses"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    }
+]

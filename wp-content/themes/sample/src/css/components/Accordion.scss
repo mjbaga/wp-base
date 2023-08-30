@@ -1,0 +1,183 @@
+.accordion {
+
+  &-item {
+    border-bottom: 1px solid color(black);
+  }
+
+  &-heading {
+    padding-block: 0.8rem;
+
+    button {
+      @extend %custom-btn;
+      gap: 1rem;
+      color: color(black);
+
+      span {
+        text-transform: none;
+        font-size: calc-rem(19px);
+        line-height: calc-rem(21px);
+        letter-spacing: -0.02em;
+        font-weight: 400;
+      }
+
+      i.icon.icon-plus {
+        color: color(black);
+      }
+    }
+  }
+
+  &-body {
+    display: none;
+    padding-block: 0.5rem 1rem;
+  }
+
+  &-tabs {
+    padding-block: 1rem;
+
+    &__tabs {
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+      list-style: none;
+      padding: 0;
+      padding-bottom: 32px;
+      border-bottom: 1px solid color(black);
+
+      @include respond-to(tablet) {
+        gap: 10px;
+      }
+
+      li {
+        width: min(22vw, 100px);
+
+        @include respond-to(tablet) {
+          width: min(22vw, 120px);
+        }
+
+        button.tab-btn {
+          background: color(white);
+          transition: $common-animation;
+          border: 1px solid color(greyblue);
+          border-radius: 50%;
+          width: 100%;
+          aspect-ratio: 1/1;
+          color: color(greyblue);
+          position: relative;
+          display: grid;
+          place-items: center;
+          cursor: pointer;
+          text-transform: none;
+          font-size: calc-rem(10px);
+          padding-inline: 4px;
+
+          @include respond-to(tablet) {
+            font-size: calc-rem(14px);
+          }
+          
+          &.active, &:hover {
+            background: color(peach);
+            color: color(black);
+          }
+
+          &.active:after {
+            bottom: -33px;
+          }
+
+          &:after {
+            z-index: -1;
+            position: absolute;
+            content: '';
+            width: 1px;
+            border-left: 1px solid color(black);
+            height: 35px;
+            background: transparent;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: $common-animation;
+          }
+        }
+  
+        
+      }
+
+
+    }
+
+    &__content {
+      display: grid;
+
+      > * {
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+        opacity: 0;
+        transition: $common-animation;
+
+        &.active {
+          opacity: 1;
+        }
+
+      }
+      
+    }
+
+    
+  }
+}
+
+@include respond-to(sm-desktop) {
+  .accordion {
+
+    &-heading {
+      padding-block: 20px;
+
+      button {
+        span {
+          font-size: calc-rem(23px);
+        }
+      }
+    }
+
+    &-tabs {
+      padding-block: 1rem;
+
+      &__tabs {
+        gap: 1rem;
+
+        li {
+          width: min(15%, 140px);
+  
+          button.tab-btn {
+            background: color(white);
+            width: 100%;
+            color: color(greyblue);
+            position: relative;
+            display: grid;
+            place-items: center;
+            font-size: calc-rem(18px);
+            
+            &:not(.active):hover {
+              background: color(peach);
+              color: color(black);
+              border: 1px solid color(peach);
+            }
+
+            &.active {
+              background: color(greyblue);
+              color: color(white);
+              cursor: default;
+            }
+  
+
+          }
+    
+          
+        }
+  
+  
+      }
+
+      
+    }
+  }
+}

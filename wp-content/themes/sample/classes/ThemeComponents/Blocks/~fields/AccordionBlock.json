@@ -1,0 +1,92 @@
+[
+	{
+		"key": "group_63d230dc84dbc",
+		"title": "Block: Accordion",
+		"fields": [
+			{
+				"key": "field_63d230ef26d7e",
+				"label": "Accordion",
+				"name": "accordion",
+				"aria-label": "",
+				"type": "repeater",
+				"instructions": "",
+				"required": 0,
+				"conditional_logic": 0,
+				"wrapper": {
+					"width": "",
+					"class": "",
+					"id": ""
+				},
+				"layout": "row",
+				"pagination": 0,
+				"min": 0,
+				"max": 0,
+				"collapsed": "",
+				"button_label": "Add Row",
+				"rows_per_page": 20,
+				"sub_fields": [
+					{
+						"key": "field_63d2312e26d80",
+						"label": "Heading",
+						"name": "heading",
+						"aria-label": "",
+						"type": "text",
+						"instructions": "",
+						"required": 1,
+						"conditional_logic": 0,
+						"wrapper": {
+							"width": "",
+							"class": "",
+							"id": ""
+						},
+						"default_value": "",
+						"maxlength": "",
+						"placeholder": "",
+						"prepend": "",
+						"append": "",
+						"parent_repeater": "field_63d230ef26d7e"
+					},
+					{
+						"key": "field_63d2314026d81",
+						"label": "Body",
+						"name": "body",
+						"aria-label": "",
+						"type": "textarea",
+						"instructions": "",
+						"required": 0,
+						"conditional_logic": 0,
+						"wrapper": {
+							"width": "",
+							"class": "",
+							"id": ""
+						},
+						"default_value": "",
+						"maxlength": "",
+						"rows": "",
+						"placeholder": "",
+						"new_lines": "",
+						"parent_repeater": "field_63d230ef26d7e"
+					}
+				]
+			}
+		],
+		"location": [
+			[
+				{
+					"param": "block",
+					"operator": "==",
+					"value": "acf\/accordion-block"
+				}
+			]
+		],
+		"menu_order": 0,
+		"position": "normal",
+		"style": "default",
+		"label_placement": "top",
+		"instruction_placement": "label",
+		"hide_on_screen": "",
+		"active": true,
+		"description": "",
+		"show_in_rest": 0
+	}
+]

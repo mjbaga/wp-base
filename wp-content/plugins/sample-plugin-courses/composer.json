@@ -1,0 +1,29 @@
+{
+    "name": "mjbaga/courses-post",
+    "author": "Marvin Jayson Baga",
+    "email": "mjdbaga@gmail.com",
+    "description": "Bespoke WordPress Plugin for Courses Post Type",
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "tommcfarlin/page-template-example",
+                "version": "1.0.0",
+                "source":{
+                    "url": "https://github.com/tommcfarlin/page-template-example.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        }
+    ],
+    "require": {
+		"tommcfarlin/page-template-example": "1.0.0",
+		"nesbot/carbon": "1.22.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "PluginCourses\\": "classes/PluginCourses"
+        }
+    }
+}

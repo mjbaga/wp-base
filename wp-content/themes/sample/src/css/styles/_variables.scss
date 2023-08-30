@@ -1,0 +1,30 @@
+/* 
+ * Colors - they are set in HSL values to be used with color mixin 
+ * e.g. color: color(black);
+ *      color: color(white, 0.5); <- with 50% opacity
+ */
+$black: 0 0% 0%;          // #000000
+$white: 0 0% 100%;        // #FFFFFF
+
+$headingFont: 'Playfair Display', serif;
+$bodyFont: 'Open Sans', Arial, sans-serif;
+
+$base-fontsize: 16px;
+
+$base-anim-speed: .450s;
+$base-anim-ease: cubic-bezier(0.22,0.61,0.36,1);
+$common-animation: all $base-anim-speed $base-anim-ease;
+
+/* Shadow */
+$boxshadow-grey: 2px 2px 5px rgba(8, 59, 156, 0.1);
+
+$breakpoints: (
+  xs-mobile: 320px,
+  sm-mobile: 420px,
+  xl-mobile: 640px,
+  tablet: 768px,
+  sm-desktop: 1024px,
+  desktop: 1280px,
+  lg-desktop: 1440px,
+  xl-desktop: 1600px
+);

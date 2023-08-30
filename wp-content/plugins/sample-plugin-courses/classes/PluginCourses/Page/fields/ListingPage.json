@@ -1,0 +1,40 @@
+[
+    {
+        "key": "group_5fa8e7977af26",
+        "title": "Course Listing Page",
+        "fields": [
+            {
+                "key": "field_5fa8f8ef6b070",
+                "label": "Back Link",
+                "name": "back_link",
+                "type": "link",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "templates\/Page\/listing.php"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    }
+]

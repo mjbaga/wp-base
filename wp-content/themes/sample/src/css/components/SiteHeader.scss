@@ -1,0 +1,86 @@
+/*
+ * Mobile-first implementation
+ * Style all base styles as from mobile then make changes as screen size increases
+ */
+
+.main-header {
+  margin: 0;
+  padding: 0;
+  background-color: color(black);
+
+  .header-sticky {
+    display: flex;
+    padding: 20px 0;
+    
+    .logo-img {
+      filter: invert(1);
+
+      img {
+        height: 45px;
+      }
+    }
+    
+    .nav-main__features ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      gap: 5px;
+
+      a {
+        text-decoration: none;
+        color : color(white);
+      }
+    }
+
+    ul.sub-menu {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+// 1024px
+@include respond-to(sm-desktop) {
+  .main-header {
+
+    .header-sticky {
+      
+      .navigation {
+        width: 100%;
+        margin-block: auto;
+
+        .nav-main__features ul {
+          justify-content: space-between;
+          width: 60%;
+          margin-inline: auto;
+
+        }
+
+        ul.sub-menu {
+          position: absolute;
+          width: 10vw;
+          background-color: black;
+          border: solid 1px color(white);
+          display: none;
+          z-index: 1;
+          padding: 1rem;
+        }
+
+        .menu-item:hover {
+          ul.sub-menu {
+            display: flex;
+            gap: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 1280px
+@include respond-to(sm-desktop) {
+  .main-header {
+    // add styles here
+  }
+}

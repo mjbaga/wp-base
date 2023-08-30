@@ -1,0 +1,12 @@
+{
+  "name": "mjbaga/sample-classes",
+  "description": "Autoloader for Sample Theme Classes",
+  "require": {
+      "nesbot/carbon": "1.22.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "ThemeComponents\\": "classes/ThemeComponents/"
+    }
+  }
+}

@@ -1,0 +1,206 @@
+//Normalize styles
+@import "./css/styles/_fonts";
+@import "./css/styles/_variables";
+@import "./css/styles/_mixins";
+@import "./css/styles/_helpers";
+@import "./css/styles/common";
+
+/* ------------------- */
+/*  Custom variables   */
+/* ------------------- */
+:root {
+  --clr-black: #{$black};
+  --clr-white: #{$white};
+}
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+html {
+  font-size: calc-rem(16px);
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  background-color: color(white);
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: calc-rem(20px);
+  font-size: calc-rem(16px);
+  font-family: $bodyFont;
+  width: 100%;
+  font-weight: 400;
+  margin: 0;
+  color: color(black);
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------- */
+/* Utility classes     */
+/* ------------------- */
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-space, 1rem);
+}
+
+.flow--space-small {
+  --flow-space: 0.5rem;
+}
+
+.mobile-only {
+  @include respond-to(sm-desktop) {
+    display: none;
+  }
+}
+
+.desktop-only {
+  display: none;
+
+  @include respond-to(sm-desktop) {
+    display: block;
+  }
+}
+
+.no-scroll {
+  overflow-y: scroll;
+  position: fixed;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  position: relative;
+  max-width: 1024px;
+  margin-inline: auto;
+  padding-inline: 24px;
+  width: 100%;
+
+  @include respond-to(sm-desktop) {
+    max-width: map-get($map: $breakpoints, $key: sm-desktop);
+  }
+
+  @include respond-to(desktop) {
+    max-width: map-get($map: $breakpoints, $key: desktop);
+  }
+
+  @include respond-to(lg-desktop) {
+    max-width: map-get($map: $breakpoints, $key: lg-desktop);
+  }
+
+  @include respond-to(xl-desktop) {
+    max-width: map-get($map: $breakpoints, $key: xl-desktop);
+  }
+}
+
+.sr-only, .vh {
+  @extend %sr-only;
+}
+
+/* ------------------- */
+/* Color Classes       */
+/* ------------------- */
+
+.fc-black {
+  color: color(black);
+}
+
+.fc-white {
+  color: color(white);
+}
+
+
+.bg-black {
+  background-color: color(black);
+}
+
+.bg-white {
+  background-color: color(white);
+}
+
+/* ------------------- */
+/* Modules             */
+/* ------------------- */
+
+@import './css/components/SiteHeader.scss';
+@import './css/components/SiteFooter.scss';
+@import './css/components/Accordion.scss';
+@import './css/components/HeroBlock.scss';
