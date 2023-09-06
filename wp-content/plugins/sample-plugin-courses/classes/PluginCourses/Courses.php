@@ -57,7 +57,8 @@ class Courses
 		add_action( 'rest_api_init', function () {
 			register_rest_route( 'courses', 'list',array(
 					'methods'  => array('POST', 'GET'),
-					'callback' => array('\\PluginCourses\\Api\\Api', 'get_filtered_courses')
+					'callback' => array('\\PluginCourses\\Api\\Api', 'get_filtered_courses'),
+					'permission_callback' => '__return_true'
 			));
 		});
 	}
