@@ -62,8 +62,7 @@ if( !function_exists( 'enqueue_sample_styles_and_scripts' ) ):
         wp_enqueue_style( 'sample_main', ASSETS_URL . '/app.css' );
         
         // footer scripts
-        // wp_enqueue_script( 'sample_modernizr', ASSETS_URL . '/scripts/modernizr-custom-flexbox.js', array(), false, true );
-        wp_enqueue_script( 'sample_main', ASSETS_URL . '/app.js', array(), false, true );
+        wp_enqueue_script( 'sample_main', ASSETS_URL . '/app.js', array(), false, false );
     }
 
 endif;
